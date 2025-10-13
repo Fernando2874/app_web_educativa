@@ -15,20 +15,20 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
     if($resultado->num_rows == 1) {
         $usuario = $resultado->fetch_assoc();
         
-        // Verificar la contraseña
+        // para poder verificar la contraseña
         if(password_verify($password, $usuario['password'])) {
-            header("location: sidebars/inicio.html");
+            header("location: principal.html");
             // Login correcto
             $_SESSION['usuario_id'] = $usuario['id'];
             $_SESSION['usuario_nombre'] = $usuario['nombre'];
             echo "<h3> Bienvenido, " . htmlspecialchars($usuario['nombre']) . "</h3>";
         } else {
-            // Contraseña incorrecta
+            // mensaje de contraseña incorrecta
             echo "<h3>Contraseña incorrecta</h3>";
             echo "<a href='login.html'>Volver</a>";
         }
         } else {
-            // Usuario no encontrado
+            // mensaje de usuario no encontrado
             echo "<h3>No existe ninguna cuenta con ese correo</h3>";
             echo "<a href='signup.html'>Regístrate</a>";
         }

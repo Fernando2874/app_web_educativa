@@ -1,12 +1,19 @@
+/* Estructura general */
+.layout {
+  display: flex; /* sidebar + contenido al lado */
+  min-height: 100vh;
+  width: 100%;
+  margin: 0;
+}
+
 body {
   font-family: Arial, sans-serif;
   background: #f5f5f5;
+  margin: 0;
+  min-height: 100vh;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh; /* toda la altura de la pantalla */
-  margin: 0; /* elimina margenes por defecto */
 }
+
 
 .container {
   background: white;
@@ -109,3 +116,162 @@ main {
 .scrollarea {
   overflow-y: auto;
 }
+
+.profile-pic {
+  width: 120px; /* tamaño del círculo */
+  height: 120px;
+  border-radius: 50%; /* hace el círculo */
+  overflow: hidden; /* recorta los bordes sobrantes */
+  border: 3px solid #4caf50; /* color del borde (puedes cambiarlo) */
+  display: block;
+  margin: 0 auto 20px auto;
+}
+
+.profile-pic img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* asegura que la imagen se vea bien */
+}
+
+/* Sidebar fijo a la izquierda */
+.sidebar {
+  width: 220px;
+  background-color: #1e1e2f;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+  transition: width 0.3s;
+  height: 100vh;
+}
+
+/*boton de reduccion de sidebar*/
+.toggle-btn{
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  margin-left: 10px;
+  margin-bottom: 20px;
+}
+
+/* Sidebar colapsado */
+.sidebar.collapsed {
+  width: 60px; /* ancho reducido */
+  align-items: center;
+}
+
+/* Menú del sidebar */
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+}
+
+.sidebar ul li {
+  width: 100%;
+  text-align: center;
+  margin: 10px 0;
+}
+
+.sidebar ul li a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  padding: 10px;
+  transition: background 0.3s;
+}
+
+.sidebar ul li a:hover {
+  background-color: #343454;
+}
+
+/* Contenido principal */
+.main-content {
+  flex: 1;
+  background-color: #f4f4f4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: auto;
+}
+
+/* estilos de pagina de inicio */
+
+.subject-card {
+    background-color: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    width: 200px;
+    padding: 25px 20px;
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.2s ease;
+}
+
+.subject-card:hover{
+  transform: translateY(-5px);
+}
+.subject-title {
+  color: #0078ff;
+  margin-bottom: 15px;
+  font-size: 1.3em;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #0078ff;
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background-color: #005fcc;
+}
+
+/* Header */
+.header {
+  text-align: center;
+  background-color: #0078ff;
+  color: white;
+  padding: 35px 227px;
+}
+
+
+.header h1 {
+  margin: 0;
+  font-size: 2em;
+}
+
+.header h2 {
+  margin-top: 10px;
+  font-weight: 400;
+  font-size: 1.2em;
+}
+
+/* Sección de materias */
+.section-subjects {
+  display: flex;
+  justify-content: center;   /* Centra las tarjetas horizontalmente */
+  align-items: center;       /* Alinea verticalmente (por si se ajusta la altura) */
+  gap: 20px;                 /* Espacio entre tarjetas */
+  flex-wrap: wrap;           /* Hace que se ajusten si no caben en pantalla */
+  padding: 40px 20px;
+}
+
+.subjects-container{
+  display: flex;
+  justify-content: center;   /* centra las tarjetas horizontalmente */
+  align-items: flex-start;   /* alinea las tarjetas arriba */
+  gap: 25px;                 /* espacio entre tarjetas */
+  flex-wrap: wrap;           /* permite que bajen si no caben */
+  padding: 40px 20px;
+}
+
