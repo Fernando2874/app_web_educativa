@@ -7,7 +7,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
     $password = $_POST['password'];
 
     $sql = "SELECT id,nombre,email,password FROM usuarios WHERE email = ?"; //busqueda
-    $stmt = $conexion->prepare($sql); //previene inyecciones SQL
+    $stmt = $conexion->prepare($sql); //previene inyecciones SQL)
     $stmt->bind_param("s",$email);
     $stmt-> execute();
     $resultado = $stmt->get_result();
@@ -17,11 +17,14 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
         
         // para poder verificar la contraseña
         if(password_verify($password, $usuario['password'])) {
-            header("location: principal.html");
             // Login correcto
             $_SESSION['usuario_id'] = $usuario['id'];
             $_SESSION['usuario_nombre'] = $usuario['nombre'];
-            echo "<h3> Bienvenido, " . htmlspecialchars($usuario['nombre']) . "</h3>";
+            $_SESSION['usuario_email'] = $usuario['email'];
+
+            header("location: perfil.php");
+            exit;
+            // echo "<h3> Bienvenido, " . htmlspecialchars($usuario['nombre']) . "</h3>";
         } else {
             // mensaje de contraseña incorrecta
             echo "<h3>Contraseña incorrecta</h3>";

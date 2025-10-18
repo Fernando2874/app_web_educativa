@@ -6,19 +6,25 @@
     <title>Document</title>
     <link rel="stylesheet" href="estilo.css"></link>
   </head>
-  <body>
-    <form action="login.php" method="post">
+  <body class="BODY">
+    <form action="login.php" method="post" class="FORMU">
       <div class="contenedor">
         <img src="assets/logo.jpg" class="posicion" alt="logo">
-      </div>
-      <h2>Iniciar sesión</h2>
 
-      <label for="email">Correo electrónico:</label>
-      <input type="email" id="email" name="email" required />
+        <h2>Iniciar sesión</h2>
 
-      <label for="password">Contraseña:</label>
-      <input type="password" id="password" name="password" required/><!--<a href=""></a>-->
+        <label for="email">Correo electrónico:</label>
+        <input type="email" id="email" name="email" required />
 
+        <label for="password">Contraseña:</label>
+        <div class="password-container">
+          <input type="password" id="password" name="password" required  /><!--<a href=""></a>-->
+          <button type="button" class="see-btn" id="see-password">
+            <img id="icon" src="assets/ojo.png" alt="ver" class="img-posicion">
+          </button>
+        </div>
+      </div>      
+      <br>
       <button type="submit" >Entrar</button>
 
       <p>¿No tienes cuenta? <a href="signup.html">Regístrate</a></p>

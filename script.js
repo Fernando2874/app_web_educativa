@@ -14,3 +14,14 @@ togglebtn.addEventListener("click", ()=>{ /*cuando haga click en el boton se eje
   funcion*/
   sidebar.classList.toggle("collapsed"); /*hace que el ancho del sidebar se reduzca*/
 })
+
+const contraseña = document.getElementById("password");
+const checkbox = document.getElementById("see-password");
+
+checkbox.addEventListener('click', () => {
+  if (contraseña.type === "password") {
+    contraseña.type = "text";
+  } else {
+    contraseña.type = "password";
+  }
+});
