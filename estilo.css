@@ -1,277 +1,170 @@
 /* Estructura general */
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f5f5;
+    margin: 0;
+}
+
 .layout {
-  display: flex; /* sidebar + contenido al lado */
-  min-height: 100vh;
-  width: 100%;
-  margin: 0;
+    display: flex; /* Coloca la barra lateral y el contenido uno al lado del otro */
+    min-height: 100vh; /* Ocupa toda la altura de la pantalla */
 }
 
-body {
-  font-family: Arial, sans-serif;
-  background: #f5f5f5;
-  margin: 0;
-  min-height: 100vh;
-  display: flex;
-}
-
-
-.container {
-  background: white;
-  padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 300px;
-  text-align: center;
-}
-
-input {
-  width: 100%;
-  padding: 10px;
-  margin: 8px 0;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-button {
-  width: 100%;
-  padding: 10px;
-  background: #0078ff;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-button:hover {
-  background: #005fcc;
-}
-
-.posicion {
-  display: block;
-  margin: 0 auto 20px auto; /* centrado y espacio abajo */
-  width: 100px;
-  height: 100px;
-}
-
-body {
-  min-height: 100vh;
-  min-height: -webkit-fill-available;
-}
-
-html {
-  height: -webkit-fill-available;
-}
-
-main {
-  height: 100vh;
-  height: -webkit-fill-available;
-  max-height: 100vh;
-  overflow-x: auto;
-  overflow-y: hidden;
-}
-
-.dropdown-toggle { outline: 0; }
-
-.btn-toggle {
-  padding: .25rem .5rem;
-  font-weight: 600;
-  color: var(--bs-emphasis-color);
-  background-color: transparent;
-}
-.btn-toggle:hover,
-.btn-toggle:focus {
-  color: rgba(var(--bs-emphasis-color-rgb), .85);
-  background-color: var(--bs-tertiary-bg);
-}
-
-.btn-toggle::before {
-  width: 1.25em;
-  line-height: 0;
-  content: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='rgba%280,0,0,.5%29' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M5 14l6-6-6-6'/%3e%3c/svg%3e");
-  transition: transform .35s ease;
-  transform-origin: .5em 50%;
-}
-
-[data-bs-theme="dark"] .btn-toggle::before {
-  content: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='rgba%28255,255,255,.5%29' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M5 14l6-6-6-6'/%3e%3c/svg%3e");
-}
-
-.btn-toggle[aria-expanded="true"] {
-  color: rgba(var(--bs-emphasis-color-rgb), .85);
-}
-.btn-toggle[aria-expanded="true"]::before {
-  transform: rotate(90deg);
-}
-
-.btn-toggle-nav a {
-  padding: .1875rem .5rem;
-  margin-top: .125rem;
-  margin-left: 1.25rem;
-}
-.btn-toggle-nav a:hover,
-.btn-toggle-nav a:focus {
-  background-color: var(--bs-tertiary-bg);
-}
-
-.scrollarea {
-  overflow-y: auto;
-}
-
-.profile-pic {
-  width: 120px; /* tamaño del círculo */
-  height: 120px;
-  border-radius: 50%; /* hace el círculo */
-  overflow: hidden; /* recorta los bordes sobrantes */
-  border: 3px solid #4caf50; /* color del borde (puedes cambiarlo) */
-  display: block;
-  margin: 0 auto 20px auto;
-}
-
-.profile-pic img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* asegura que la imagen se vea bien */
-}
-
-/* Sidebar fijo a la izquierda */
+/* --- BARRA LATERAL (Sidebar) --- */
 .sidebar {
-  width: 220px;
-  background-color: #1e1e2f;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-top: 20px;
-  transition: width 0.3s;
-  height: 100vh;
+    width: 220px;
+    background-color: #1e1e2f;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    transition: width 0.3s;
+    height: 100vh;
 }
 
-/*boton de reduccion de sidebar*/
-.toggle-btn{
-  background: none;
-  border: none;
-  color: white;
-  font-size: 24px;
-  cursor: pointer;
-  margin-left: 10px;
-  margin-bottom: 20px;
+/* Botón para colapsar la barra lateral */
+.toggle-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    align-self: flex-start; /* Alinea el botón a la izquierda */
+    margin-left: 15px;
+    margin-bottom: 20px;
 }
 
-/* Sidebar colapsado */
+/* Estilo de la barra lateral colapsada */
 .sidebar.collapsed {
-  width: 60px; /* ancho reducido */
-  align-items: center;
+    width: 60px;
+    align-items: center;
 }
 
-/* Menú del sidebar */
+/* Menú de navegación */
 .sidebar ul {
-  list-style: none;
-  padding: 0;
-  width: 100%;
+    list-style: none;
+    padding: 0;
+    width: 100%;
 }
 
 .sidebar ul li {
-  width: 100%;
-  text-align: center;
-  margin: 10px 0;
+    width: 100%;
+    text-align: left; /* Alinea el texto a la izquierda */
+    margin: 10px 0;
 }
 
 .sidebar ul li a {
-  color: white;
-  text-decoration: none;
-  display: block;
-  padding: 10px;
-  transition: background 0.3s;
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 10px 20px; /* Añade padding para que se vea mejor */
+    transition: background 0.3s;
 }
 
 .sidebar ul li a:hover {
-  background-color: #343454;
+    background-color: #343454;
 }
 
-/* Contenido principal */
+/* --- CONTENIDO PRINCIPAL --- */
 .main-content {
-  flex: 1;
-  background-color: #f4f4f4;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  overflow-y: auto;
+    flex: 1; /* Hace que esta sección ocupe el resto del espacio */
+    background-color: #ffffff; /* Fondo blanco para el área de contenido */
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto; /* Permite scroll si el contenido es muy largo */
+    padding: 30px;
 }
 
-/* estilos de pagina de inicio */
+/* Encabezado */
+.header {
+    /* ** MODIFICACIONES APLICADAS AQUÍ ** */
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; 
+    gap: 20px;
+    background-color: #0078ff;
+    color: white;
+    padding: 15px 30px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    border-radius: 15px;
+}
+
+.header-logo img {
+    /* ** MODIFICACIONES APLICADAS AQUÍ ** */
+    width: 60px; /* Tamaño del logo ajustado para mejor visibilidad */
+    height: auto;
+}
+
+/* ** NUEVO CONTENEDOR PARA EL TEXTO ** */
+.header-text-container {
+    display: flex; 
+    flex-direction: column; /* Apila el h1 y h3 verticalmente */
+    justify-content: center;
+    align-items: flex-start;
+    flex-grow: 1; /* Ocupa el espacio restante */
+}
+
+.header-text-container h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+.header-text-container h3 {
+    margin: 5px 0 0 0; /* Un pequeño margen superior para separarlo del h1 */
+    font-size: 1.1em;
+    font-weight: normal;
+    opacity: 0.9;
+}
+
+/* Sección de información de la lección */
+.info-leccion {
+    padding: 20px 40px;
+    background-color: #ffffc5;
+    border-radius: 15px;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+/* --- ESTILOS PARA LA PÁGINA DE INICIO (los dejamos por si los usas) --- */
+.subjects-container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    padding: 40px 20px;
+}
 
 .subject-card {
-    background-color: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     border-radius: 10px;
     width: 200px;
     padding: 25px 20px;
-    overflow: hidden;
     text-align: center;
     transition: transform 0.2s ease;
 }
 
-.subject-card:hover{
-  transform: translateY(-5px);
+.subject-card:hover {
+    transform: translateY(-5px);
 }
+
 .subject-title {
-  color: #0078ff;
-  margin-bottom: 15px;
-  font-size: 1.3em;
+    color: #0078ff;
+    margin-bottom: 15px;
+    font-size: 1.3em;
 }
 
 .btn {
-  display: inline-block;
-  background-color: #0078ff;
-  color: white;
-  text-decoration: none;
-  padding: 10px 20px;
-  border-radius: 6px;
-  font-weight: bold;
-  transition: background 0.3s;
+    display: inline-block;
+    background-color: #0078ff;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: background 0.3s;
 }
 
 .btn:hover {
-  background-color: #005fcc;
+    background-color: #005fcc;
 }
-
-/* Header */
-.header {
-  text-align: center;
-  background-color: #0078ff;
-  color: white;
-  padding: 35px 227px;
-}
-
-
-.header h1 {
-  margin: 0;
-  font-size: 2em;
-}
-
-.header h2 {
-  margin-top: 10px;
-  font-weight: 400;
-  font-size: 1.2em;
-}
-
-/* Sección de materias */
-.section-subjects {
-  display: flex;
-  justify-content: center;   /* Centra las tarjetas horizontalmente */
-  align-items: center;       /* Alinea verticalmente (por si se ajusta la altura) */
-  gap: 20px;                 /* Espacio entre tarjetas */
-  flex-wrap: wrap;           /* Hace que se ajusten si no caben en pantalla */
-  padding: 40px 20px;
-}
-
-.subjects-container{
-  display: flex;
-  justify-content: center;   /* centra las tarjetas horizontalmente */
-  align-items: flex-start;   /* alinea las tarjetas arriba */
-  gap: 25px;                 /* espacio entre tarjetas */
-  flex-wrap: wrap;           /* permite que bajen si no caben */
-  padding: 40px 20px;
-}
-
