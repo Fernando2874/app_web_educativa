@@ -2,6 +2,7 @@
 session_start();//maneja sesiones y permite saber quien esta logueado
 include 'conexion.php';
 
+
 if($_SERVER["REQUEST_METHOD"]=="POST"){
     $email = $_POST['email'];
     $password = $_POST['password'];
@@ -22,7 +23,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
             $_SESSION['usuario_nombre'] = $usuario['nombre'];
             $_SESSION['usuario_email'] = $usuario['email'];
 
-            header("location: perfil.php");
+            header("location: inicio.html");
             exit;
             // echo "<h3> Bienvenido, " . htmlspecialchars($usuario['nombre']) . "</h3>";
         } else {

@@ -1,6 +1,5 @@
 <?php
 session_start(); // Inicia la sesión
-
 // Verificar si hay sesión activa
 if(!isset($_SESSION['usuario_nombre']) || !isset($_SESSION['usuario_email'])){
     echo "No hay sesión iniciada.";
@@ -28,8 +27,9 @@ $email_usuario = $_SESSION['usuario_email'] ?? '';
         <div class="sidebar" id="sidebar">
             <button class="toggle-btn" id="toggle-btn">☰</button>
             <ul>
-                <li><a href="perfil.php">Perfil</a></li>
                 <li><a href="inicio.html">Inicio</a></li>
+                <li><a href="perfil.php">Perfil</a></li>
+                <li><a href="cerrarsesion.php">Cerrar sesión</a></li>
             </ul>
         </div>
 

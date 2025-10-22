@@ -13,16 +13,16 @@
             <ul>
                 <li><a href="/inicio.html">Inicio</a></li>
                 <li><a href="/perfil.html">Perfil</a></li>
-                <li><a href="/ejercicios/Restas.html">Restas</a></li>
+                <li><a href="Restas.html">Restas</a></li>
             </ul>
         </div>
 
         <div class="main-content">
             <header class="header">
                 <div class="header-logo">
-                    <img src="/assets/logo.jpg" alt="Logo" class="logo">
+                    <img src="assets/logo.jpg" alt="Logo" class="logo">
                 </div>
-                <h1>Lecciones de Sumas ➕</h1>
+                <h1>Leccion: La Suma ➕</h1>
             </header>
 
             <section class="info-leccion" >
@@ -35,7 +35,66 @@
                     Cada lección incluye una explicación, ejemplos y ejercicios para que practiques lo aprendido.
                 </p>
             </section>
+            <section class="info-leccion">
+                <h2>Explicación del Tema</h2>
+                <p>
+                    La <strong>suma</strong> es una <em>operación aritmética</em> que consiste en <strong>reunir o agregar varias cantidades</strong> para obtener un solo resultado llamado <strong>total o suma</strong>.
+                </p>
+                <p>
+                    Se representa con el símbolo <strong>+</strong> (más).  
+                    Por ejemplo: cuando juntas 3 manzanas 🍎 con 2 más 🍎, obtienes 5 en total.
+                </p>
+                <div class="ejemplo">
+                    <h2>Ejemplo</h2>
+                    <p>🍎🍎🍎 + 🍎🍎 = 🍎🍎🍎🍎🍎</p>
+                    <p><strong>3 + 2 = 5</strong></p>
+                </div>
+                <div class="nota">
+                    💡 <strong>Dato curioso:</strong> La palabra "suma" viene del latín <em>“summa”</em>, que significa “resultado” o “cantidad total”.
+                </div>
+            </section>
+            <section class="info-leccion">
+            <h2>🔢 Partes de una suma</h2>
+            <p>Las sumas se componen de <strong>sumandos</strong> y un <strong>resultado</strong> o <strong>suma total</strong>.</p>
+                <div class="ejemplo">
+                    <p><strong>20</strong> ← Primer sumando</p>
+                    <p><strong>15</strong> ← Segundo sumando</p>
+                    <p><strong>35</strong> ← Suma o total</p>
+                    <div class="sumas"><strong>20 + 15 = 35</strong></div>
+                </div>
+            </section>
+            <section class="info-leccion">
+                <h2>🧩 Ejemplos prácticos</h2>
+                <p>La suma se usa en muchas situaciones cotidianas, como contar dinero, tiempo o personas. Por ejemplo:</p>
+                <div class="ejemplo">
+                    <h1>Resolver los Siguientes Problemas</h1>
+                    <p>💰 Si tienes $10 y te dan $5 más, ¿cuánto tienes en total?</p>
+                    <label for="email">Primer Sumando</label>
+                    <input type="text" id="sumando1" name="sumando1" />
+
+                    <label for="password">Segundo Sumando</label>
+                    <input type="text" id="sumando2" name="sumando2" />
+        
+                    <label for="email">Resultado</label>
+                    <input type="text" id="resultado" name="resultado"/><br>
+                    <button type="button" onclick="sumar()">Calcular</button>
+                </div>
+
+                <div class="ejemplo">
+                    <p>👫 Si hay 4 niños en el parque y llegan 3 más:</p>
+                    <label for="email">Primer Sumando</label>
+                    <input type="text" id="sumando1" name="sumando1"/>
+
+                    <label for="password">Segundo Sumando</label>
+                    <input type="text" id="sumando2" name="sumando2"/>
+        
+                    <label for="email">Resultado</label>
+                    <input type="text" id="resultado" name="resultado"/><br>
+                    <button type="button" onclick="sumar()">Calcular</button>
+                </div>
+            </section>
         </div>
     </div>
+    <script src="../script.js"></script>
 </body>
 </html>

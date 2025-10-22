@@ -248,6 +248,7 @@ body {
 
 .img-posicion{
   width: 80px;
+  height: 80px;
   border-radius: 50%;
 }
 
@@ -294,4 +295,31 @@ button[type="submit"] {
 p {
   text-align: center;
   margin-top: 10px;
+}
+
+.posicion{
+  width: 120px;
+  height: 120px;
+}
+
+.ejemplo{
+  background-color: #e3f2fd;
+  border-left: 6px solid #1565c0;
+  padding: 1em;
+  border-radius: 10px;
+  margin-top: 1em;
+}
+
+.sumas {
+  font-size: 1.5em;
+  text-align: center;
+  margin: 1em 0;
+}
+
+.nota{
+  background: #fff9c4;
+  border-left: 6px solid #fbc02d;
+  padding: 1em;
+  border-radius: 10px;
+  font-weight: 500;
 }
