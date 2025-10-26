@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lecciones</title>
+    <title>Lección: Multiplicación</title>
     <link rel="stylesheet" href="../estilo.css">
 </head>
 <body>
@@ -12,9 +12,9 @@
             <button class="toggle-btn" id="toggle-btn">☰</button>
             <ul>
                 <li><a href="/inicio.html">Inicio</a></li>
-                <li><a href="/ejercicios/Sumas.html">Sumas</a></li>
                 <li><a href="/perfil.html">Perfil</a></li>
-            </ul>
+                <li><a href="Restas.html">Restas</a></li>
+                <li><a href="Suma.html">Suma</a></li> </ul>
         </div>
 
         <div class="main-content">
@@ -22,27 +22,79 @@
                 <div class="header-logo">
                     <img src="assets/logo.jpg" alt="Logo" class="logo">
                 </div>
-                <h1>Lecciones de Restas➖</h1>
+                <h1>Leccion: La Multiplicación ✖️</h1>
             </header>
 
-            <section class="info-leccion" >
-                <h2>Lección: La Resta ➖</h2>
+            <section class="info-leccion">
+                <h2>Bienvenido</h2>
                 <p>
-                    ¡Es hora de aprender a restar! La <strong>Resta</strong> es la operación que nos permite calcular la <strong>Diferencia</strong> entre dos o más números. Es fundamental para resolver problemas de la vida diaria, como saber cuánto cambio debes recibir.
+                    En esta sección aprenderás sobre la <strong>Multiplicación</strong>, una operación fundamental para simplificar sumas repetidas.
+                    ¡Vamos a dominarla!
+                </p>
+            </section>
+            
+            <section class="info-leccion">
+                <h2>Explicación del Tema</h2>
+                <p>
+                    La <strong>Multiplicación</strong> es una <em>operación aritmética</em> que consiste en <strong>sumar un número tantas veces como indica otro número</strong>. Es una forma rápida de hacer sumas repetidas.
                 </p>
                 <p>
-                    En esta lección:
-                <ul>
-                    <li>Verás el concepto de sustraendo y minuendo.</li>
-                    <li>Aprenderás a restar con y sin acarreo.</li>
-                    <li>Practicarás con ejercicios interactivos para dominar la habilidad.</li>
-                </ul>
+                    Se representa con el símbolo <strong>×</strong> (por) o, a veces, con un punto (•) o un asterisco (*).
+                    Por ejemplo: si tienes 4 grupos de 3 lápices ✏️, estás sumando 3 cuatro veces.
                 </p>
-                <p>
-                    Asegúrate de haber entendido bien la suma antes de continuar. ¡Empecemos!
-                </p>
+                <div class="ejemplo">
+                    <h2>Ejemplo</h2>
+                    <p>(✏️✏️✏️) + (✏️✏️✏️) + (✏️✏️✏️) + (✏️✏️✏️) = ✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️✏️</p>
+                    <p><strong>3 + 3 + 3 + 3 = 12</strong>, lo cual es lo mismo que <strong>4 × 3 = 12</strong></p>
+                </div>
+                <div class="nota">
+                    💡 <strong>Dato curioso:</strong> Al número que se multiplica se le llama <strong>multiplicando</strong>, y al número por el que se multiplica se le llama <strong>multiplicador</strong>. Juntos se les conoce como <strong>factores</strong>.
+                </div>
+            </section>
+            
+            <section class="info-leccion">
+                <h2>🔢 Partes de una Multiplicación</h2>
+                <p>La multiplicación se compone de <strong>factores</strong> y un <strong>producto</strong> (el resultado).</p>
+                <div class="ejemplo">
+                    <p><strong>8</strong> ← Factor (Multiplicando)</p>
+                    <p><strong>3</strong> ← Factor (Multiplicador)</p>
+                    <p><strong>24</strong> ← Producto o total</p>
+                    <div class="sumas"><strong>8 × 3 = 24</strong></div>
+                </div>
+            </section>
+            
+            <section class="info-leccion">
+                <h2>🧩 Ejemplos prácticos</h2>
+                <p>La multiplicación es esencial para calcular áreas, costos totales o distancias. Resuelve estos problemas:</p>
+                <div class="ejemplo">
+                    <h1>Resolver los Siguientes Problemas</h1>
+                    <p>📦 Si tienes 5 cajas y en cada una hay 6 libros, ¿cuántos libros tienes en total?</p>
+                    <label for="factor1">Primer Factor</label>
+                    <input type="text" id="factor1" name="factor1" />
+
+                    <label for="factor2">Segundo Factor</label>
+                    <input type="text" id="factor2" name="factor2" />
+        
+                    <label for="resultado">Resultado</label>
+                    <input type="text" id="resultado" name="resultado"/><br>
+                    <button type="button" onclick="multiplicar()">Calcular</button>
+                </div>
+
+                <div class="ejemplo">
+                    <p>🍰 Un pastel cuesta $12. Si compras 4 pasteles, ¿cuánto pagas en total?</p>
+                    <label for="factor1">Primer Factor</label>
+                    <input type="text" id="factor1" name="factor1"/>
+
+                    <label for="factor2">Segundo Factor</label>
+                    <input type="text" id="factor2" name="factor2"/>
+        
+                    <label for="resultado">Resultado</label>
+                    <input type="text" id="resultado" name="resultado"/><br>
+                    <button type="button" onclick="multiplicar()">Calcular</button>
+                </div>
             </section>
         </div>
     </div>
+    <script src="../script.js"></script>
 </body>
 </html>

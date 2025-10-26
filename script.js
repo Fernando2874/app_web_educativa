@@ -35,3 +35,11 @@ function sumar (){
   const resultado = sumando1 + sumando2;
   document.getElementById("resultado").value = resultado;
 }
+
+function restar (){
+  const minuendo = parseInt(document.getElementById("minuendo").value);
+  const sustraendo = parseInt(document.getElementById("sustraendo").value);
+
+  const diferencia = minuendo - sustraendo;
+  document.getElementById("diferencia").value = diferencia;
+}

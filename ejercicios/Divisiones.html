@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lecciones</title>
+    <title>Lección: División</title>
     <link rel="stylesheet" href="../estilo.css">
 </head>
 <body>
@@ -12,9 +12,9 @@
             <button class="toggle-btn" id="toggle-btn">☰</button>
             <ul>
                 <li><a href="/inicio.html">Inicio</a></li>
-                <li><a href="/ejercicios/Sumas.html">Sumas</a></li>
                 <li><a href="/perfil.html">Perfil</a></li>
-            </ul>
+                <li><a href="Restas.html">Restas</a></li>
+                <li><a href="Suma.html">Suma</a></li> <li><a href="Multiplicacion.html">Multiplicación</a></li> </ul>
         </div>
 
         <div class="main-content">
@@ -22,27 +22,80 @@
                 <div class="header-logo">
                     <img src="assets/logo.jpg" alt="Logo" class="logo">
                 </div>
-                <h1>Lecciones de Restas➖</h1>
+                <h1>Leccion: La División ➗</h1>
             </header>
 
-            <section class="info-leccion" >
-                <h2>Lección: La Resta ➖</h2>
+            <section class="info-leccion">
+                <h2>Bienvenido</h2>
                 <p>
-                    ¡Es hora de aprender a restar! La <strong>Resta</strong> es la operación que nos permite calcular la <strong>Diferencia</strong> entre dos o más números. Es fundamental para resolver problemas de la vida diaria, como saber cuánto cambio debes recibir.
+                    En esta sección aprenderás sobre la <strong>División</strong>, la operación que nos permite repartir cantidades en partes iguales.
+                    ¡Es hora de compartir!
+                </p>
+            </section>
+            
+            <section class="info-leccion">
+                <h2>Explicación del Tema</h2>
+                <p>
+                    La <strong>División</strong> es una <em>operación aritmética</em> que consiste en <strong>repartir una cantidad total en partes iguales</strong>. Es la operación inversa a la multiplicación.
                 </p>
                 <p>
-                    En esta lección:
-                <ul>
-                    <li>Verás el concepto de sustraendo y minuendo.</li>
-                    <li>Aprenderás a restar con y sin acarreo.</li>
-                    <li>Practicarás con ejercicios interactivos para dominar la habilidad.</li>
-                </ul>
+                    Se representa con el símbolo <strong>÷</strong> (entre), dos puntos (:) o con una línea de fracción (/).
+                    Por ejemplo: si tienes 10 galletas 🍪 y quieres repartirlas entre 5 amigos, le darás 2 a cada uno.
                 </p>
-                <p>
-                    Asegúrate de haber entendido bien la suma antes de continuar. ¡Empecemos!
-                </p>
+                <div class="ejemplo">
+                    <h2>Ejemplo</h2>
+                    <p>🍪🍪🍪🍪🍪🍪🍪🍪🍪🍪 repartidas entre 5 = 🍪🍪 para cada uno</p>
+                    <p><strong>10 ÷ 5 = 2</strong></p>
+                </div>
+                <div class="nota">
+                    💡 <strong>Dato curioso:</strong> El número que se reparte se llama <strong>Dividendo</strong>. El número de partes en que se divide es el <strong>Divisor</strong>.
+                </div>
+            </section>
+            
+            <section class="info-leccion">
+                <h2>🔢 Partes de una División</h2>
+                <p>La división se compone de un <strong>dividendo</strong>, un <strong>divisor</strong>, un <strong>cociente</strong> (el resultado) y, a veces, un <strong>residuo</strong>.</p>
+                <div class="ejemplo">
+                    <p><strong>30</strong> ← Dividendo</p>
+                    <p><strong>5</strong> ← Divisor</p>
+                    <p><strong>6</strong> ← Cociente (Resultado)</p>
+                    <p><strong>0</strong> ← Residuo (Lo que sobra)</p>
+                    <div class="sumas"><strong>30 ÷ 5 = 6</strong></div>
+                </div>
+            </section>
+            
+            <section class="info-leccion">
+                <h2>🧩 Ejemplos prácticos</h2>
+                <p>La división se usa para repartir ganancias, calcular promedios o determinar el tiempo. Resuelve estos problemas:</p>
+                <div class="ejemplo">
+                    <h1>Resolver los Siguientes Problemas</h1>
+                    <p>🍬 Tienes 25 dulces y quieres distribuirlos equitativamente en 5 bolsas. ¿Cuántos dulces van en cada bolsa?</p>
+                    <label for="dividendo">Dividendo</label>
+                    <input type="text" id="dividendo" name="dividendo" />
+
+                    <label for="divisor">Divisor</label>
+                    <input type="text" id="divisor" name="divisor" />
+        
+                    <label for="resultado">Cociente</label>
+                    <input type="text" id="cociente" name="cociente"/><br>
+                    <button type="button" onclick="dividir()">Calcular</button>
+                </div>
+
+                <div class="ejemplo">
+                    <p>🎨 En el salón hay 32 lápices de colores que se repartirán entre 8 mesas. ¿Cuántos lápices le toca a cada mesa?</p>
+                    <label for="dividendo">Dividendo</label>
+                    <input type="text" id="dividendo" name="dividendo"/>
+
+                    <label for="divisor">Divisor</label>
+                    <input type="text" id="divisor" name="divisor"/>
+        
+                    <label for="resultado">Cociente</label>
+                    <input type="text" id="cociente" name="cociente"/><br>
+                    <button type="button" onclick="dividir()">Calcular</button>
+                </div>
             </section>
         </div>
     </div>
+    <script src="../script.js"></script>
 </body>
 </html>

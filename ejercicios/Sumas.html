@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lecciones</title>
     <link rel="stylesheet" href="../estilo.css">
 </head>
+
 <body>
     <div class="layout">
         <div class="sidebar" id="sidebar">
             <button class="toggle-btn" id="toggle-btn">☰</button>
             <ul>
-                <li><a href="/inicio.html">Inicio</a></li>
-                <li><a href="/perfil.html">Perfil</a></li>
+                <li><a href="../inicio.html">Inicio</a></li>
+                <li><a href="../perfil.html">Perfil</a></li>
                 <li><a href="Restas.html">Restas</a></li>
             </ul>
         </div>
@@ -25,11 +27,13 @@
                 <h1>Leccion: La Suma ➕</h1>
             </header>
 
-            <section class="info-leccion" >
+            <section class="info-leccion">
                 <h2>Bienvenido</h2>
                 <p>
-                    En esta sección encontrarás lecciones interactivas para aprender las operaciones básicas de las matemáticas.
-                    Puedes comenzar con la <strong>suma</strong> y luego avanzar hacia <strong>restas</strong>, <strong>multiplicaciones</strong> y <strong>divisiones</strong>.
+                    En esta sección encontrarás lecciones interactivas para aprender las operaciones básicas de las
+                    matemáticas.
+                    Puedes comenzar con la <strong>suma</strong> y luego avanzar hacia <strong>restas</strong>,
+                    <strong>multiplicaciones</strong> y <strong>divisiones</strong>.
                 </p>
                 <p>
                     Cada lección incluye una explicación, ejemplos y ejercicios para que practiques lo aprendido.
@@ -38,10 +42,12 @@
             <section class="info-leccion">
                 <h2>Explicación del Tema</h2>
                 <p>
-                    La <strong>suma</strong> es una <em>operación aritmética</em> que consiste en <strong>reunir o agregar varias cantidades</strong> para obtener un solo resultado llamado <strong>total o suma</strong>.
+                    La <strong>suma</strong> es una <em>operación aritmética</em> que consiste en <strong>reunir o
+                        agregar varias cantidades</strong> para obtener un solo resultado llamado <strong>total o
+                        suma</strong>.
                 </p>
                 <p>
-                    Se representa con el símbolo <strong>+</strong> (más).  
+                    Se representa con el símbolo <strong>+</strong> (más).
                     Por ejemplo: cuando juntas 3 manzanas 🍎 con 2 más 🍎, obtienes 5 en total.
                 </p>
                 <div class="ejemplo">
@@ -50,12 +56,14 @@
                     <p><strong>3 + 2 = 5</strong></p>
                 </div>
                 <div class="nota">
-                    💡 <strong>Dato curioso:</strong> La palabra "suma" viene del latín <em>“summa”</em>, que significa “resultado” o “cantidad total”.
+                    💡 <strong>Dato curioso:</strong> La palabra "suma" viene del latín <em>“summa”</em>, que significa
+                    “resultado” o “cantidad total”.
                 </div>
             </section>
             <section class="info-leccion">
-            <h2>🔢 Partes de una suma</h2>
-            <p>Las sumas se componen de <strong>sumandos</strong> y un <strong>resultado</strong> o <strong>suma total</strong>.</p>
+                <h2>🔢 Partes de una suma</h2>
+                <p>Las sumas se componen de <strong>sumandos</strong> y un <strong>resultado</strong> o <strong>suma
+                        total</strong>.</p>
                 <div class="ejemplo">
                     <p><strong>20</strong> ← Primer sumando</p>
                     <p><strong>15</strong> ← Segundo sumando</p>
@@ -63,38 +71,49 @@
                     <div class="sumas"><strong>20 + 15 = 35</strong></div>
                 </div>
             </section>
-            <section class="info-leccion">
-                <h2>🧩 Ejemplos prácticos</h2>
-                <p>La suma se usa en muchas situaciones cotidianas, como contar dinero, tiempo o personas. Por ejemplo:</p>
-                <div class="ejemplo">
-                    <h1>Resolver los Siguientes Problemas</h1>
-                    <p>💰 Si tienes $10 y te dan $5 más, ¿cuánto tienes en total?</p>
-                    <label for="email">Primer Sumando</label>
-                    <input type="text" id="sumando1" name="sumando1" />
+            <section class="info-leccion niveles-suma">
+                <h2>Niveles de Práctica de la Suma</h2>
+                <p>Elige tu nivel de dificultad para comenzar a practicar con ejercicios.</p>
 
-                    <label for="password">Segundo Sumando</label>
-                    <input type="text" id="sumando2" name="sumando2" />
-        
-                    <label for="email">Resultado</label>
-                    <input type="text" id="resultado" name="resultado"/><br>
-                    <button type="button" onclick="sumar()">Calcular</button>
+                <div class="ejemplo">
+                    <h3>⭐ Nivel 1: BÁSICO (Fácil)</h3>
+                    <p><strong>Propósito:</strong> Introducción a la suma, practicando números de 1 y 2 dígitos sin
+                        acarreo.</p>
+                    <ul>
+                        <li><strong>Características:</strong> Números pequeños (generalmente 1-2 dígitos). El resultado
+                            no pasa de la siguiente decena/centena.</li>
+                        <li><strong>Ejemplo Típico:</strong> $14 + 5$</li>
+                    </ul>
+                    <a href="Sumas1.php" class="btn-start">Comenzar</a>
                 </div>
 
                 <div class="ejemplo">
-                    <p>👫 Si hay 4 niños en el parque y llegan 3 más:</p>
-                    <label for="email">Primer Sumando</label>
-                    <input type="text" id="sumando1" name="sumando1"/>
+                    <h3>⭐⭐ Nivel 2: MEDIO (Intermedio)</h3>
+                    <p><strong>Propósito:</strong> Dominar el concepto de **acarreo** (llevar) en una o dos columnas.
+                    </p>
+                    <ul>
+                        <li><strong>Características:</strong> Números de 2 a 3 dígitos. Requiere reagrupación (llevar)
+                            de unidades a decenas.</li>
+                        <li><strong>Ejemplo Típico:</strong> $37 + 56$</li>
+                    </ul>
+                    <a href="Sumas2.php" class="btn-start">Comenzar</a>
+                </div>
 
-                    <label for="password">Segundo Sumando</label>
-                    <input type="text" id="sumando2" name="sumando2"/>
-        
-                    <label for="email">Resultado</label>
-                    <input type="text" id="resultado" name="resultado"/><br>
-                    <button type="button" onclick="sumar()">Calcular</button>
+                <div class="ejemplo">
+                    <h3>⭐⭐⭐ Nivel 3: AVANZADO (Difícil)</h3>
+                    <p><strong>Propósito:</strong> Practicar el acarreo en múltiples columnas con números grandes (hasta
+                        miles).</p>
+                    <ul>
+                        <li><strong>Características:</strong> Números de 3 o 4 dígitos. Acarreo continuo en varias
+                            posiciones.</li>
+                        <li><strong>Ejemplo Típico:</strong> $789 + 456$</li>
+                    </ul>
+                    <a href="Sumas3.php" class="btn-start">Comenzar</a>
                 </div>
             </section>
         </div>
     </div>
     <script src="../script.js"></script>
 </body>
+
 </html>
