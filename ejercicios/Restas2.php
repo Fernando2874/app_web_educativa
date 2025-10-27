@@ -73,15 +73,10 @@
             <h2>Resuelve:</h2>
             <div class="ejemplo">
                 <p style="font-size: 3em; text-align: center;">
-                    María tenía <?php echo htmlspecialchars($minuendo)?> galletas 🍪 en una bandeja. Su hermano
-                    Juan,
-                    horneó
-                    <?php echo htmlspecialchars($sustraendo)?> galletas más y
-                    las
-                    agregó a
-                    la bandeja </p>
+                    Un camion lleva <?php echo htmlspecialchars($minuendo)?> cajas. Si entrego
+                    <?php echo htmlspecialchars($sustraendo)?> cajas en la primera parada</p>
                 <p style="font-size: 3em; text-align: center;">
-                    Cuántas galletas tiene María en total ahora?
+                    Cuántas cajas le quedan para entregar en la segunda parada?
                 </p><label>
                     <label>Minuendo</label>
                     <input type="text" value="<?php echo $minuendo; ?>" />

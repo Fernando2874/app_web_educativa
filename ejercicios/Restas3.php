@@ -73,32 +73,27 @@
             <h2>Resuelve:</h2>
             <div class="ejemplo">
                 <p style="font-size: 3em; text-align: center;">
-                    María tenía <?php echo htmlspecialchars($minuendo)?> galletas 🍪 en una bandeja. Su hermano
-                    Juan,
-                    horneó
-                    <?php echo htmlspecialchars($sustraendo)?> galletas más y
-                    las
-                    agregó a
-                    la bandeja </p>
+                    Hay <?php echo htmlspecialchars($minuendo)?> litros de agua dentro de la reserva de una comunidad.
+                    si se consumen <?php echo htmlspecialchars($sustraendo)?> litros cada semana</p>
                 <p style="font-size: 3em; text-align: center;">
-                    Cuántas galletas tiene María en total ahora?
-                </p><label>
-                    <label>Minuendo</label>
-                    <input type="text" value="<?php echo $minuendo; ?>" />
+                    Cuántos litros quedaran en la reserva dentro de 1 mes</p>
 
-                    <label>Sustranedo</label>
-                    <input type="text" value=" <?php echo $sustraendo; ?>" />
+                <label>Minuendo</label>
+                <input type="text" value="<?php echo $minuendo; ?>" />
 
-                    <form method="POST">
-                        <input type="hidden" name="resultado_correcto_oculto"
-                            value="<?php echo htmlspecialchars($resultado_correcto_actual); ?>" />
-                        <label>Tu Respuesta</label>
-                        <input type="text" name="respuesta_usuario" />
-                        <button type="submit"> Verificar </button>
-                    </form>
-                    <a href="Restas.html" style="text-decoration: none; margin-top: 50px; display: block;">Volver a la
-                        Leccion
-                    </a>
+                <label>Sustranedo</label>
+                <input type="text" value=" <?php echo $sustraendo; ?>" />
+
+                <form method="POST">
+                    <input type="hidden" name="resultado_correcto_oculto"
+                        value="<?php echo htmlspecialchars($resultado_correcto_actual); ?>" />
+                    <label>Tu Respuesta</label>
+                    <input type="text" name="respuesta_usuario" />
+                    <button type="submit"> Verificar </button>
+                </form>
+                <a href="Restas.html" style="text-decoration: none; margin-top: 50px; display: block;">Volver a la
+                    Leccion
+                </a>
             </div>
         </section>
     </div>

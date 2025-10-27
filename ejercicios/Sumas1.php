@@ -83,21 +83,22 @@
                 <p style="font-size: 3em; text-align: center;">
                     Cuántas galletas tiene María en total ahora?
                 </p><label>
-                </label>
-                <input type="text" value="<?php echo $sumando_1; ?>" />
+                    <label>Primer Sumando</label>
+                    <input type="text" value="<?php echo $sumando_1; ?>" />
 
-                <label>Segundo Sumando</label>
-                <input type="text" value=" <?php echo $sumando_2; ?>" />
+                    <label>Segundo Sumando</label>
+                    <input type="text" value=" <?php echo $sumando_2; ?>" />
 
-                <form method="POST">
-                    <input type="hidden" name="resultado_correcto_oculto"
-                        value="<?php echo htmlspecialchars($resultado_correcto_actual); ?>" />
-                    <label>Tu Respuesta</label>
-                    <input type="text" name="respuesta_usuario" />
-                    <button type="submit"> Verificar </button>
-                </form>
-                <a href="Sumas2.php" style="text-decoration: none; margin-top: 50px; display: block;">Dificultad Media
-                </a>
+                    <form method="POST">
+                        <input type="hidden" name="resultado_correcto_oculto"
+                            value="<?php echo htmlspecialchars($resultado_correcto_actual); ?>" />
+                        <label>Tu Respuesta</label>
+                        <input type="text" name="respuesta_usuario" />
+                        <button type="submit"> Verificar </button>
+                    </form>
+                    <a href="Sumas2.php" style="text-decoration: none; margin-top: 50px; display: block;">Dificultad
+                        Media
+                    </a>
             </div>
         </section>
     </div>

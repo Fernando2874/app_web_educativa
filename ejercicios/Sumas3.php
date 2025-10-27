@@ -73,32 +73,28 @@
             <h2>Resuelve:</h2>
             <div class="ejemplo">
                 <p style="font-size: 3em; text-align: center;">
-                    María tenía <?php echo htmlspecialchars($sumando_1)?> galletas 🍪 en una bandeja. Su hermano
-                    Juan,
-                    horneó
-                    <?php echo htmlspecialchars($sumando_2)?> galletas más y
-                    las
-                    agregó a
-                    la bandeja </p>
+                    "Para ir a la playa, condujiste <?php echo htmlspecialchars($sumando_1)?> kilómetros el primer día y
+                    <?php echo htmlspecialchars($sumando_2)?> kilómetros el
+                    segundo.</p>
                 <p style="font-size: 3em; text-align: center;">
-                    Cuántas galletas tiene María en total ahora?
+                    ¿Cuál fue la distancia total que recorriste?"
                 </p><label>
-                </label>
-                <input type="text" value="<?php echo $sumando_1; ?>" />
+                    <label>Primer Sumando</label>
+                    <input type="text" value="<?php echo $sumando_1; ?>" />
 
-                <label>Segundo Sumando</label>
-                <input type="text" value="<?php echo $sumando_2; ?>" />
+                    <label>Segundo Sumando</label>
+                    <input type="text" value="<?php echo $sumando_2; ?>" />
 
-                <form method="POST">
-                    <input type="hidden" name="resultado_correcto_oculto"
-                        value="<?php echo htmlspecialchars($resultado_correcto_actual); ?>" />
-                    <label>Tu Respuesta</label>
-                    <input type="text" name="respuesta_usuario" />
-                    <button type="submit"> Verificar </button>
-                </form>
-                <a href="Sumas.html" style="text-decoration: none; margin-top: 50px; display: block;">Volver a la
-                    Lección
-                </a>
+                    <form method="POST">
+                        <input type="hidden" name="resultado_correcto_oculto"
+                            value="<?php echo htmlspecialchars($resultado_correcto_actual); ?>" />
+                        <label>Tu Respuesta</label>
+                        <input type="text" name="respuesta_usuario" />
+                        <button type="submit"> Verificar </button>
+                    </form>
+                    <a href="Sumas.html" style="text-decoration: none; margin-top: 50px; display: block;">Volver a la
+                        Lección
+                    </a>
             </div>
         </section>
     </div>

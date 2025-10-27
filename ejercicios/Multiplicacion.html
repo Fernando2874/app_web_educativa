@@ -11,10 +11,12 @@
         <div class="sidebar" id="sidebar">
             <button class="toggle-btn" id="toggle-btn">☰</button>
             <ul>
-                <li><a href="/inicio.html">Inicio</a></li>
-                <li><a href="/perfil.html">Perfil</a></li>
+                <li><a href="../inicio.html">Inicio</a></li>
+                <li><a href="../perfil.html">Perfil</a></li>
+                <li><a href="Suma.html">Suma</a></li>
                 <li><a href="Restas.html">Restas</a></li>
-                <li><a href="Suma.html">Suma</a></li> </ul>
+                <li><a href="Divisiones.html">División</a></li> 
+                            </ul>
         </div>
 
         <div class="main-content">
@@ -57,40 +59,44 @@
                 <p>La multiplicación se compone de <strong>factores</strong> y un <strong>producto</strong> (el resultado).</p>
                 <div class="ejemplo">
                     <p><strong>8</strong> ← Factor (Multiplicando)</p>
-                    <p><strong>3</strong> ← Factor (Multiplicador)</p>
+                    <p><strong>× 3</strong> ← Factor (Multiplicador)</p>
                     <p><strong>24</strong> ← Producto o total</p>
                     <div class="sumas"><strong>8 × 3 = 24</strong></div>
                 </div>
             </section>
             
-            <section class="info-leccion">
-                <h2>🧩 Ejemplos prácticos</h2>
-                <p>La multiplicación es esencial para calcular áreas, costos totales o distancias. Resuelve estos problemas:</p>
-                <div class="ejemplo">
-                    <h1>Resolver los Siguientes Problemas</h1>
-                    <p>📦 Si tienes 5 cajas y en cada una hay 6 libros, ¿cuántos libros tienes en total?</p>
-                    <label for="factor1">Primer Factor</label>
-                    <input type="text" id="factor1" name="factor1" />
+                        <section class="info-leccion niveles-multiplicacion">
+                <h2>Niveles de Práctica de la Multiplicación</h2>
+                <p>Elige tu nivel de dificultad para comenzar a practicar y memorizar las tablas.</p>
 
-                    <label for="factor2">Segundo Factor</label>
-                    <input type="text" id="factor2" name="factor2" />
-        
-                    <label for="resultado">Resultado</label>
-                    <input type="text" id="resultado" name="resultado"/><br>
-                    <button type="button" onclick="multiplicar()">Calcular</button>
+                <div class="ejemplo">
+                    <h3>⭐ Nivel 1: BÁSICO (Tablas y un dígito)</h3>
+                    <p><strong>Propósito:</strong> Reforzar el conocimiento de las tablas de multiplicar y la multiplicación por un solo dígito.</p>
+                    <ul>
+                        <li><strong>Características:</strong> Multiplicando de 1 o 2 dígitos. Multiplicador de 1 dígito.</li>
+                        <li><strong>Ejemplo Típico:</strong> $9 × 7$ o $15 × 5$</li>
+                    </ul>
+                    <a href="Multiplicacion1.php" class="btn-start">Comenzar</a>
                 </div>
 
                 <div class="ejemplo">
-                    <p>🍰 Un pastel cuesta $12. Si compras 4 pasteles, ¿cuánto pagas en total?</p>
-                    <label for="factor1">Primer Factor</label>
-                    <input type="text" id="factor1" name="factor1"/>
+                    <h3>⭐⭐ Nivel 2: MEDIO (Dos dígitos)</h3>
+                    <p><strong>Propósito:</strong> Aprender la multiplicación por un factor de dos dígitos, manejando filas y sumas parciales.</p>
+                    <ul>
+                        <li><strong>Características:</strong> Multiplicando de 2 o 3 dígitos. Multiplicador de 2 dígitos. Requiere una suma final.</li>
+                        <li><strong>Ejemplo Típico:</strong> $45 × 12$</li>
+                    </ul>
+                    <a href="Multiplicacion2.php" class="btn-start">Comenzar</a>
+                </div>
 
-                    <label for="factor2">Segundo Factor</label>
-                    <input type="text" id="factor2" name="factor2"/>
-        
-                    <label for="resultado">Resultado</label>
-                    <input type="text" id="resultado" name="resultado"/><br>
-                    <button type="button" onclick="multiplicar()">Calcular</button>
+                <div class="ejemplo">
+                    <h3>⭐⭐⭐ Nivel 3: AVANZADO (Factores grandes)</h3>
+                    <p><strong>Propósito:</strong> Dominar la multiplicación con factores de tres o más dígitos, manejando acarreos continuos.</p>
+                    <ul>
+                        <li><strong>Características:</strong> Multiplicando y Multiplicador de 3 o 4 dígitos. Productos de hasta 5 o 6 dígitos.</li>
+                        <li><strong>Ejemplo Típico:</strong> $345 × 150$</li>
+                    </ul>
+                    <a href="Multiplicacion3.php" class="btn-start">Comenzar</a>
                 </div>
             </section>
         </div>

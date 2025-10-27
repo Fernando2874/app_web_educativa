@@ -12,7 +12,7 @@
     
     //se guarda el nivel de dificultad de los ejercicios
     //isset sirve para verificar que una variable este definida
-    $nivel_dificultad = isset($_GET['nivel']) ? (int)$_GET['nivel'] : 2;
+    $nivel_dificultad = isset($_GET['nivel']) ? (int)$_GET['nivel'] : 1;
     $mensaje = "";
     $respuesta_usuario = isset($_POST['respuesta_usuario']) ? (int)$_POST['respuesta_usuario']: null; //se obtiene la respuesta del usuario
     $respuesta_correcta_anterior = isset($_POST['resultado_correcto_oculto']) ? (int)$_POST['resultado_correcto_oculto'] : null;
@@ -24,8 +24,8 @@
             $mensaje = "<p>El resultado es incorrecto ❌. El resultado correcto era: $respuesta_correcta_anterior</p>";
         }
     }
-    $sql = "SELECT id_suma, id_nivel, sumando_1, sumando_2, resultado_correcto 
-        FROM problemassuma 
+    $sql = "SELECT id_multiplicacion, id_nivel, primerfactor, segundofactor, resultado_correcto 
+        FROM problemasmultiplicacion 
         WHERE id_nivel = ? 
         ORDER BY RAND() 
         LIMIT 1";
@@ -35,13 +35,13 @@
     $resultado = $stmt->get_result();
 
     $problema = null;
-    $sumando_1 = 0;
-    $sumando_2 = 0;
+    $primerfactor = 0;
+    $segundofactor = 0;
     $resultado_correcto_actual = 0;
     if ($resultado->num_rows > 0) {
         $problema = $resultado->fetch_assoc();
-        $sumando_1 = $problema['sumando_1'];
-        $sumando_2 = $problema['sumando_2'];
+        $primerfactor = $problema['primerfactor'];
+        $segundofactor = $problema['segundofactor'];
         $resultado_correcto_actual = $problema['resultado_correcto']; //nuevo problema
     }
 // Si no se encontró un problema y no se acaba de verificar una respuesta (para evitar sobrescribir el mensaje Correcto/Incorrecto)
@@ -64,7 +64,7 @@
 <body>
     <div class=" main-content">
         <header class="header">
-            <h1>Problema de Suma Nivel <?php echo htmlspecialchars($nivel_dificultad); ?> ➕ <?php
+            <h1>Problema de Multiplicacion Nivel <?php echo htmlspecialchars($nivel_dificultad); ?> ✖️ <?php
                     echo $mensaje;
                 ?></h1>
         </header>
@@ -73,17 +73,16 @@
             <h2>Resuelve:</h2>
             <div class="ejemplo">
                 <p style="font-size: 3em; text-align: center;">
-                    "Tenías <?php echo htmlspecialchars($sumando_1)?> cartas de Pokémon 🔥. En tu cumpleaños, recibiste
-                    <?php echo htmlspecialchars($sumando_2)?>
-                    cartas más.</p>
+                    Tienes <?php echo htmlspecialchars($primerfactor)?> canastas y en cada una hay
+                    <?php echo htmlspecialchars($segundofactor)?> manzanas 🍎.</p>
                 <p style="font-size: 3em; text-align: center;">
-                    ¿Cuántas cartas tienes ahora?"
+                    ¿Cuántas manzanas hay en total?
                 </p><label>
-                    <label>Primer Sumando</label>
-                    <input type="text" value="<?php echo $sumando_1; ?>" />
+                    <label>Primer Factor</label>
+                    <input type="text" value="<?php echo $primerfactor; ?>" />
 
-                    <label>Segundo Sumando</label>
-                    <input type="text" value="<?php echo $sumando_2; ?>" />
+                    <label>Segundo Factor</label>
+                    <input type="text" value=" <?php echo $segundofactor; ?>" />
 
                     <form method="POST">
                         <input type="hidden" name="resultado_correcto_oculto"
@@ -92,8 +91,9 @@
                         <input type="text" name="respuesta_usuario" />
                         <button type="submit"> Verificar </button>
                     </form>
-                    <a href="Sumas3.php" style="text-decoration: none; margin-top: 50px; display: block;">Dificultad
-                        Dificil
+                    <a href="Multiplicacion2.php"
+                        style="text-decoration: none; margin-top: 50px; display: block;">Dificultad
+                        Media
                     </a>
             </div>
         </section>

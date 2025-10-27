@@ -13,8 +13,10 @@
             <ul>
                 <li><a href="/inicio.html">Inicio</a></li>
                 <li><a href="/perfil.html">Perfil</a></li>
+                <li><a href="Suma.html">Suma</a></li>
                 <li><a href="Restas.html">Restas</a></li>
-                <li><a href="Suma.html">Suma</a></li> <li><a href="Multiplicacion.html">Multiplicación</a></li> </ul>
+                <li><a href="Multiplicacion.html">Multiplicación</a></li>
+            </ul>
         </div>
 
         <div class="main-content">
@@ -40,11 +42,11 @@
                 </p>
                 <p>
                     Se representa con el símbolo <strong>÷</strong> (entre), dos puntos (:) o con una línea de fracción (/).
-                    Por ejemplo: si tienes 10 galletas 🍪 y quieres repartirlas entre 5 amigos, le darás 2 a cada uno.
+                    Por ejemplo: si tienes 10 flores 🌸 y quieres hacer 5 ramos, cada ramo tendrá 2 flores.
                 </p>
                 <div class="ejemplo">
                     <h2>Ejemplo</h2>
-                    <p>🍪🍪🍪🍪🍪🍪🍪🍪🍪🍪 repartidas entre 5 = 🍪🍪 para cada uno</p>
+                    <p>🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸 repartidas en 5 ramos = 🌸🌸 para cada ramo</p>
                     <p><strong>10 ÷ 5 = 2</strong></p>
                 </div>
                 <div class="nota">
@@ -56,42 +58,46 @@
                 <h2>🔢 Partes de una División</h2>
                 <p>La división se compone de un <strong>dividendo</strong>, un <strong>divisor</strong>, un <strong>cociente</strong> (el resultado) y, a veces, un <strong>residuo</strong>.</p>
                 <div class="ejemplo">
-                    <p><strong>30</strong> ← Dividendo</p>
-                    <p><strong>5</strong> ← Divisor</p>
-                    <p><strong>6</strong> ← Cociente (Resultado)</p>
-                    <p><strong>0</strong> ← Residuo (Lo que sobra)</p>
+                    <p><strong>30</strong> ← Dividendo (La cantidad total a repartir)</p>
+                    <p><strong>5</strong> ← Divisor (El número de partes)</p>
+                    <p><strong>6</strong> ← Cociente (Resultado por parte)</p>
+                    <p><strong>0</strong> ← Residuo (Lo que sobra al final)</p>
                     <div class="sumas"><strong>30 ÷ 5 = 6</strong></div>
                 </div>
             </section>
             
-            <section class="info-leccion">
-                <h2>🧩 Ejemplos prácticos</h2>
-                <p>La división se usa para repartir ganancias, calcular promedios o determinar el tiempo. Resuelve estos problemas:</p>
-                <div class="ejemplo">
-                    <h1>Resolver los Siguientes Problemas</h1>
-                    <p>🍬 Tienes 25 dulces y quieres distribuirlos equitativamente en 5 bolsas. ¿Cuántos dulces van en cada bolsa?</p>
-                    <label for="dividendo">Dividendo</label>
-                    <input type="text" id="dividendo" name="dividendo" />
+                        <section class="info-leccion niveles-division">
+                <h2>Niveles de Práctica de la División</h2>
+                <p>Elige tu nivel de dificultad para comenzar a practicar la distribución de cantidades.</p>
 
-                    <label for="divisor">Divisor</label>
-                    <input type="text" id="divisor" name="divisor" />
-        
-                    <label for="resultado">Cociente</label>
-                    <input type="text" id="cociente" name="cociente"/><br>
-                    <button type="button" onclick="dividir()">Calcular</button>
+                <div class="ejemplo">
+                    <h3>⭐ Nivel 1: BÁSICO (Divisiones Exactas)</h3>
+                    <p><strong>Propósito:</strong> Practicar divisiones simples que resultan en un cociente entero sin residuo.</p>
+                    <ul>
+                        <li><strong>Características:</strong> Divisor de 1 dígito. Resultado es un número entero.</li>
+                        <li><strong>Ejemplo Típico:</strong> $45 ÷ 9$</li>
+                    </ul>
+                    <a href="Division1.php" class="btn-start">Comenzar</a>
                 </div>
 
                 <div class="ejemplo">
-                    <p>🎨 En el salón hay 32 lápices de colores que se repartirán entre 8 mesas. ¿Cuántos lápices le toca a cada mesa?</p>
-                    <label for="dividendo">Dividendo</label>
-                    <input type="text" id="dividendo" name="dividendo"/>
+                    <h3>⭐⭐ Nivel 2: MEDIO (Cociente y Residuo)</h3>
+                    <p><strong>Propósito:</strong> Aprender a manejar el residuo (lo que sobra) y a extender la división para obtener decimales.</p>
+                    <ul>
+                        <li><strong>Características:</strong> Divisor de 1 o 2 dígitos. La respuesta puede requerir un cociente entero + residuo o hasta 2 decimales.</li>
+                        <li><strong>Ejemplo Típico:</strong> $50 ÷ 7$</li>
+                    </ul>
+                    <a href="Division2.php" class="btn-start">Comenzar</a>
+                </div>
 
-                    <label for="divisor">Divisor</label>
-                    <input type="text" id="divisor" name="divisor"/>
-        
-                    <label for="resultado">Cociente</label>
-                    <input type="text" id="cociente" name="cociente"/><br>
-                    <button type="button" onclick="dividir()">Calcular</button>
+                <div class="ejemplo">
+                    <h3>⭐⭐⭐ Nivel 3: AVANZADO (Divisor Grande)</h3>
+                    <p><strong>Propósito:</strong> Dominar divisiones largas con divisores de 2 o 3 dígitos y la estimación del cociente.</p>
+                    <ul>
+                        <li><strong>Características:</strong> Dividendo de 3 a 5 dígitos. Divisor de 2 o más dígitos.</li>
+                        <li><strong>Ejemplo Típico:</strong> $1500 ÷ 25$</li>
+                    </ul>
+                    <a href="Division3.php" class="btn-start">Comenzar</a>
                 </div>
             </section>
         </div>
