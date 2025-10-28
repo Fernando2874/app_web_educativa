@@ -15,7 +15,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
     
     if($stmt->execute()) { //mensaje de registro exitoso o erroneo
         echo "<h3> Registro exitoso</h3>";
-        echo "<a href='login.html'>Iniciar sesión</a>";
+        header("location : login.html");
     }else{
         echo "<h3> Error: " . $stmt->error . "<h3>";
     }

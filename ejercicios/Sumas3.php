@@ -64,9 +64,7 @@
 <body>
     <div class=" main-content">
         <header class="header">
-            <h1>Problema de Suma Nivel <?php echo htmlspecialchars($nivel_dificultad); ?> ➕ <?php
-                    echo $mensaje;
-                ?></h1>
+            <h1>Problema de Suma Nivel <?php echo htmlspecialchars($nivel_dificultad); ?> ➕</h1>
         </header>
 
         <section class="info-leccion">
@@ -91,9 +89,9 @@
                         <label>Tu Respuesta</label>
                         <input type="text" name="respuesta_usuario" />
                         <button type="submit"> Verificar </button>
-                    </form>
-                    <a href="Sumas.html" style="text-decoration: none; margin-top: 50px; display: block;">Volver a la
-                        Lección
+                        <?php echo $mensaje; ?>
+                    </form><br><br>
+                    <a href="Sumas.html" class="btn" tyle="margin-top: 50px;">Volver a la Lección
                     </a>
             </div>
         </section>

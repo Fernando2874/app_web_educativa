@@ -33,13 +33,19 @@ $email_usuario = $_SESSION['usuario_email'] ?? '';
             </ul>
         </div>
 
-        <div class="profile-pic">
-            <img src="assets/perfil.png" alt="Foto de perfil" />
-        </div>
+        <div class="main-content">
+            <h1>Mi Perfil</h1>
 
-        <div class="perfil">
-            <h2><?php echo htmlspecialchars($nombre_usuario); ?></h2>
-            <h2><?php echo htmlspecialchars($email_usuario); ?></h2>
+            <div class="profile-card">
+                <div class="profile-pic">
+                    <img src="assets/perfil.png" alt="Foto de perfil" />
+                </div>
+                <div class="perfil-info">
+                    <h2><?php echo htmlspecialchars($nombre_usuario); ?></h2>
+                    <p><?php echo htmlspecialchars($email_usuario); ?></p>
+                </div>
+            </div>
+
         </div>
     </div>
 

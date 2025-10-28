@@ -24,7 +24,7 @@
             if ($respuesta_usuario_cociente === $respuesta_cociente_anterior && $respuesta_usuario_residuo === $respuesta_residuo_anterior){
                 $mensaje = "<p>El resultado es correcto ✅</p>";
             }else{
-                $mensaje = "<p>El resultado es incorrecto ❌. El resultado correcto era: $respuesta_correcta_anterior</p>";
+                $mensaje = "<p>El resultado es incorrecto ❌. El resultado correcto era  Cociente: $respuesta_cociente_anterior y Residuo: $respuesta_residuo_anterior</p>";
             }
         }
     }
@@ -70,9 +70,7 @@
 <body>
     <div class=" main-content">
         <header class="header">
-            <h1>Problema de Multiplicacion Nivel <?php echo htmlspecialchars($nivel_dificultad); ?> ✖️ <?php
-                    echo $mensaje;
-                ?></h1>
+            <h1>Problema de División Nivel <?php echo htmlspecialchars($nivel_dificultad); ?> ➗</h1>
         </header>
 
         <section class="info-leccion">
@@ -101,9 +99,9 @@
                         <label>Resultado Residuo</label>
                         <input type="text" name="respuesta_usuario_residuo" />
                         <button type="submit"> Verificar </button>
-                    </form>
-                    <a href="Division2.php" style="text-decoration: none; margin-top: 50px; display: block;">Dificultad
-                        Media
+                        <?php echo $mensaje; ?>
+                    </form><br><br>
+                    <a href="Division2.php" class="btn" tyle="margin-top: 50px;">Dificultad Media
                     </a>
             </div>
         </section>

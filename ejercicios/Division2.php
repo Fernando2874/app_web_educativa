@@ -70,9 +70,7 @@
 <body>
     <div class=" main-content">
         <header class="header">
-            <h1>Problema de Multiplicacion Nivel <?php echo htmlspecialchars($nivel_dificultad); ?> ✖️ <?php
-                    echo $mensaje;
-                ?></h1>
+            <h1>Problema de División Nivel <?php echo htmlspecialchars($nivel_dificultad); ?> ➗ </h1>
         </header>
 
         <section class="info-leccion">
@@ -101,8 +99,9 @@
                         <label>Resultado Residuo</label>
                         <input type="text" name="respuesta_usuario_residuo" />
                         <button type="submit"> Verificar </button>
-                    </form>
-                    <a href="Division3.php" style="text-decoration: none; margin-top: 50px; display: block;">Dificultad
+                        <?php echo $mensaje; ?>
+                    </form><br><br>
+                    <a href="Division3.php" class="btn" tyle="margin-top: 50px;">Dificultad
                         Dificil
                     </a>
             </div>
