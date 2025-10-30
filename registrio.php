@@ -14,8 +14,8 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
     $stmt->bind_param("sss",$nombre,$email,$password_cifrada);
     
     if($stmt->execute()) { //mensaje de registro exitoso o erroneo
-        echo "<h3> Registro exitoso</h3>";
-        header("location : login.html");
+        header("location: login.html");
+        exit;
     }else{
         echo "<h3> Error: " . $stmt->error . "<h3>";
     }

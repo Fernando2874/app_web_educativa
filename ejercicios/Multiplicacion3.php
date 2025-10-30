@@ -62,7 +62,17 @@
 </head>
 
 <body>
-    <div class=" main-content">
+    <ul class="burbujas">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    <div class="main-content">
         <header class="header">
             <h1>Problema de Multiplicación Nivel <?php echo htmlspecialchars($nivel_dificultad); ?> ✖️</h1>
         </header>
@@ -82,16 +92,15 @@
                     <label>Segundo Factor</label>
                     <input type="text" value=" <?php echo $segundofactor; ?>" />
 
-                    <form method="POST">
-                        <input type="hidden" name="resultado_correcto_oculto"
+                    <form method="POST" action="<?php echo htmlspecialchars($_SERVER['REQUEST_URI']); ?>">
+                        <input type=" hidden" name="resultado_correcto_oculto"
                             value="<?php echo htmlspecialchars($resultado_correcto_actual); ?>" />
                         <label>Tu Respuesta</label>
                         <input type="text" name="respuesta_usuario" />
                         <button type="submit"> Verificar </button>
                         <?php echo $mensaje; ?>
                     </form><br><br>
-                    <a href="Multiplicacion.html" class="btn" tyle="margin-top: 50px;">
-                        Volver a la
+                    <a href="Multiplicacion.html" class="btn" style="margin-top: 50px;">Volver a la
                         Leccion
                     </a>
             </div>

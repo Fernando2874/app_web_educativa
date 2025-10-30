@@ -62,7 +62,17 @@
 </head>
 
 <body>
-    <div class=" main-content">
+    <ul class="burbujas">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    <div class="main-content">
         <header class="header">
             <h1>Problema de Resta Nivel <?php echo htmlspecialchars($nivel_dificultad); ?> ➖</h1>
         </header>
@@ -82,16 +92,19 @@
                     <label>Sustranedo</label>
                     <input type="text" value=" <?php echo $sustraendo; ?>" />
 
-                    <form method="POST">
-                        <input type="hidden" name="resultado_correcto_oculto"
+                    <form method="POST" action="<?php echo htmlspecialchars($_SERVER['REQUEST_URI']); ?>">
+                        <input type=" hidden" name="resultado_correcto_oculto"
                             value="<?php echo htmlspecialchars($resultado_correcto_actual); ?>" />
                         <label>Tu Respuesta</label>
                         <input type="text" name="respuesta_usuario" />
                         <button type="submit"> Verificar </button>
                         <?php echo $mensaje; ?>
                     </form><br><br>
-                    <a href="Restas2.php" class="btn" tyle="margin-top: 50px;">Dificultad
+                    <a href="Restas2.php" class="btn" style="margin-top: 50px;">Dificultad
                         Media
+                    </a>
+                    <a href="Restas.html" class="btn" style="margin-left: 800px">Volver a la
+                        Leccion
                     </a>
             </div>
         </section>

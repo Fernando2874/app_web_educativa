@@ -68,7 +68,17 @@
 </head>
 
 <body>
-    <div class=" main-content">
+    <ul class="burbujas">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    <div class="main-content">
         <header class="header">
             <h1>Problema de División Nivel <?php echo htmlspecialchars($nivel_dificultad); ?> ➗</h1>
         </header>
@@ -89,7 +99,7 @@
                     <label>Divisor</label>
                     <input type="text" value=" <?php echo $divisor; ?>" />
 
-                    <form method="POST">
+                    <form method="POST" action="<?php echo htmlspecialchars($_SERVER['REQUEST_URI']); ?>">
                         <input type="hidden" name="resultado_cociente_oculto"
                             value="<?php echo htmlspecialchars($resultado_cociente_actual); ?>" />
                         <input type="hidden" name="resultado_residuo_oculto"
@@ -101,7 +111,7 @@
                         <input type="text" name="respuesta_usuario_residuo" />
                         <button type="submit"> Verificar </button>
                     </form><br><br>
-                    <a href="Divisiones.html" class="btn" tyle="margin-top: 50px;">Volver a
+                    <a href="Divisiones.html" class="btn" style="margin-top: 50px;">Volver a
                         la
                         leccion
                     </a>

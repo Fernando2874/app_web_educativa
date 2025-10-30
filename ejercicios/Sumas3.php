@@ -62,7 +62,17 @@
 </head>
 
 <body>
-    <div class=" main-content">
+    <ul class="burbujas">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    <div class="main-content">
         <header class="header">
             <h1>Problema de Suma Nivel <?php echo htmlspecialchars($nivel_dificultad); ?> ➕</h1>
         </header>
@@ -83,7 +93,7 @@
                     <label>Segundo Sumando</label>
                     <input type="text" value="<?php echo $sumando_2; ?>" />
 
-                    <form method="POST">
+                    <form method="POST" action="<?php echo htmlspecialchars($_SERVER['REQUEST_URI']); ?>">
                         <input type="hidden" name="resultado_correcto_oculto"
                             value="<?php echo htmlspecialchars($resultado_correcto_actual); ?>" />
                         <label>Tu Respuesta</label>
@@ -91,7 +101,7 @@
                         <button type="submit"> Verificar </button>
                         <?php echo $mensaje; ?>
                     </form><br><br>
-                    <a href="Sumas.html" class="btn" tyle="margin-top: 50px;">Volver a la Lección
+                    <a href="Sumas.html" class="btn" style="margin-top: 50px;">Volver a la Lección
                     </a>
             </div>
         </section>

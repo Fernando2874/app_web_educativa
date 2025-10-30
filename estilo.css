@@ -1,19 +1,31 @@
+/* --- 🌟 IMPORTACIÓN DE TIPOGRAFÍA (AÑADIR AL INICIO) 🌟 --- */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap');
 /* Estructura general */
 body {
-  font-family: Arial, sans-serif;
-  background: #e4edff; /* 🩶 Fondo general */
+  font-family: Verdana, 'Geneva', Tahoma, sans-serif;
+  /* background: #e4edff; / / <-- MODIFICADO */
+  background: #76bbff; /* <-- AÑADIDO */
   margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
 }
 
 .layout {
   display: flex; /* Coloca la barra lateral y el contenido uno al lado del otro */
-   min-height: 100vh; /* Ocupa toda la altura de la pantalla */
+  min-height: 100vh; /* Ocupa toda la altura de la pantalla */
+  
+  /* --- MODIFICACIONES PARA BURBUJAS --- */
+  background: #e4edff; /* <-- AÑADIDO (movido desde 'body') */
+  position: relative; /* <-- AÑADIDO */
+  z-index: 2; /* <-- AÑADIDO (para estar sobre las burbujas) */
 }
 
 /* --- BARRA LATERAL (Sidebar) --- */
 .sidebar {
   width: 220px;
-  background-color: #003366; /* 🔵 División Principal (Acento/Barra Superior) */
+  background-color: #0053a7; /* 🔵 División Principal (Acento/Barra Superior) */
   color: white;
   display: flex;
   flex-direction: column;
@@ -68,21 +80,23 @@ body {
 /* --- CONTENIDO PRINCIPAL --- */
 .main-content {
   flex: 1; /* Hace que esta sección ocupe el resto del espacio */
-  background-color: #e4edff; /* Fondo blanco para el área de contenido */
+  /* background-color: #e4edff; / / <-- ESTA LÍNEA SE MOVIÓ AL .layout */
   display: flex;
   flex-direction: column;
   overflow-y: auto; /* Permite scroll si el contenido es muy largo */
   padding: 30px;
+  /* --- 👇 LÍNEAS AÑADIDAS 👇 --- */
+  position: relative; /* Necesario para z-index */
+  z-index: 2; /* Pone el contenido sobre las burbujas */
 }
 
 /* Encabezado */
 .header {
-  /* ** MODIFICACIONES APLICADAS AQUÍ ** */
   display: flex;
   align-items: center;
   justify-content: flex-start;
   gap: 20px;
-  background-color: #003366; /* 🔵 División Principal (Encabezados/Barra Superior) */
+  background-color: #0053a7; /* 🔵 División Principal (Encabezados/Barra Superior) */
   color: #ffea66; /* color de texto */
   padding: 15px 30px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -90,12 +104,10 @@ body {
 }
 
 .header-logo img {
-  /* ** MODIFICACIONES APLICADAS AQUÍ ** */
   width: 60px; /* Tamaño del logo ajustado para mejor visibilidad */
   height: auto;
 }
 
-/* ** NUEVO CONTENEDOR PARA EL TEXTO ** */
 .header-text-container {
   display: flex;
   flex-direction: column; /* Apila el h1 y h3 verticalmente */
@@ -125,15 +137,8 @@ body {
   box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
   margin-top: 20px;
 }
-/* --- ESTILOS PARA LA PÁGINA DE INICIO (los dejamos por si los usas) --- */
-.subjects-container {
-  display: flex;
-  justify-content: center;
-  gap: 25px;
-  flex-wrap: wrap;
-  padding: 40px 20px;
-}
 
+/* --- ESTILOS PARA LA PÁGINA DE INICIO --- */
 .subject-card {
   background-color: #ffffff;
   border: 1px solid #d1d5db; /* ⚪ Bordes / Íconos suaves */
@@ -169,6 +174,7 @@ body {
 .btn:hover {
   background-color: #ff7700; /* 🔶 Suma Oscuro */
 }
+
 /* Sección de materias */
 .section-subjects {
   display: flex;
@@ -188,25 +194,21 @@ body {
   padding: 40px 20px;
 }
 
-.BODY {
-  font-family: Arial, sans-serif;
-  background: #fff4af;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
-
+/* Estilos para el formulario de Login */
 .FORMU {
   width: 300px;
   margin: 0 auto; /* Centra horizontalmente */
-  padding: 180px;
-  background: #e4edff;
+  padding: 30px; 
+  background: transparent;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 2;
+  color: rgba(255, 229, 59, 0.952);
 }
 
 .see-btn {
   position: absolute;
-  left: 265px; /* pegado a la derecha */
+  right: 10px; 
   top: 50%; /* centrado verticalmente */
   transform: translateY(-50%);
   background: none;
@@ -283,6 +285,7 @@ p {
   height: 120px;
 }
 
+/* Estilos de las Lecciones */
 .ejemplo {
   background-color: #66e0e0; /* 🩵 Multiplicación Claro (Fondo de tarjetas educativas) */
   border-left: 6px solid #003366; /* 🔵 División Principal (Borde de sección importante) */
@@ -306,19 +309,6 @@ p {
 }
 
 /* --- ESTILOS ADICIONALES PARA PERFIL */
-
-/* Título "Mi Perfil" */
-.main-content h1 {
-  background-color: #003366; /* 🔵 División Principal (Acento) */
-  border-bottom: 2px solid #f0f0f0;
-  padding-bottom: 10px;
-  margin-bottom: 20px;
-  font-size: 2.2em;
-  color: #ffea66;
-  align-items: center;
-}
-
-/* La tarjeta que contiene la info del perfil */
 .profile-card {
   max-width: 500px; /* Ancho máximo */
   margin: 40px auto; /* Centra la tarjeta horizontalmente */
@@ -330,7 +320,6 @@ p {
   text-align: center; /* Centra todo (imagen y texto) */
 }
 
-/* Estilos para la imagen de perfil */
 .profile-pic img {
   width: 150px;
   height: 150px;
@@ -340,7 +329,6 @@ p {
   object-fit: cover; /* Evita que la imagen se distorsione */
 }
 
-/* Contenedor de la información de texto */
 .perfil-info h2 {
   font-size: 2em;
   color: #333;
@@ -351,4 +339,139 @@ p {
   font-size: 1.2em;
   color: #777; /* Color más suave para el email */
   margin: 0;
+}
+
+.botones{
+  display: inline-block;
+  background-color: #3cff00; /* 🔶 Suma Principal (Botón principal) */
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+/* --- 🌟 FONDO DE BURBUJAS ANIMADAS 🌟 --- */
+/* (Este es el código nuevo que añadiste) */
+
+.burbujas {
+  /* Lo posiciona fijo en toda la pantalla */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  
+  /* Lo pone detrás del .layout (que tiene z-index: 2) */
+  z-index: 1; 
+  overflow: hidden; /* Evita barras de scroll raras */
+}
+
+.burbujas li {
+  position: absolute;
+  display: block;
+  list-style: none;
+  
+  /* Tamaño inicial */
+  width: 20px;
+  height: 20px;
+  
+  /* Color cian de tu app, con transparencia */
+  background: rgba(82, 226, 226, 0.788); 
+  
+  /* Llama a la animación */
+  animation: flotar 25s linear infinite;
+  
+  /* Empieza 150px por debajo de la pantalla */
+  bottom: -150px; 
+}
+
+/* --- Variaciones de cada burbuja --- */
+
+.burbujas li:nth-child(1) {
+  left: 25%;
+  width: 80px;
+  height: 80px;
+  animation-delay: 0s; /* Empieza de inmediato */
+}
+
+.burbujas li:nth-child(2) {
+  left: 10%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 2s;
+  animation-duration: 12s; /* Sube más rápido */
+  
+  /* Color amarillo de tu app, con transparencia */
+  background-color: rgba(255, 232, 82, 0.938); 
+}
+
+.burbujas li:nth-child(3) {
+  left: 70%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 4s;
+}
+
+.burbujas li:nth-child(4) {
+  left: 40%;
+  width: 60px;
+  height: 60px;
+  animation-delay: 0s;
+  animation-duration: 18s; /* Sube más lento */
+  
+  /* Color naranja/resta de tu app, con transparencia */
+  background-color: rgba(255, 212, 93, 0.986); 
+}
+
+.burbujas li:nth-child(5) {
+  left: 65%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 0s;
+}
+
+.burbujas li:nth-child(6) {
+  left: 85%;
+  width: 120px;
+  height: 120px;
+  animation-delay: 3s;
+  background-color: rgba(158, 255, 128, 0.911);
+}
+
+.burbujas li:nth-child(7) {
+  left: 35%;
+  width: 150px;
+  height: 150px;
+  animation-delay: 7s;
+  background-color: rgba(255, 230, 67, 0.918);
+}
+
+.burbujas li:nth-child(8) {
+  left: 50%;
+  width: 25px;
+  height: 25px;
+  animation-delay: 15s;
+  animation-duration: 45s;
+}
+
+
+/* --- La Animación (La Magia) --- */
+@keyframes flotar {
+
+  0% {
+    /* Mover 0px hacia arriba, rotar 0 grados */
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+    border-radius: 0; /* Empieza como un cuadrado */
+  }
+
+  100% {
+    /* Sube 1000px, rota 720 grados (2 vueltas) */
+    transform: translateY(-1000px) rotate(720deg);
+    opacity: 0; /* Se desvanece */
+    border-radius: 50%; /* Se convierte en círculo */
+  }
+
 }

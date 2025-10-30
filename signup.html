@@ -6,7 +6,17 @@
     <title>Document</title>
     <link rel="stylesheet" href="estilo.css"></link>
   </head>
-  <body class="BODY">
+  <body>
+    <ul class="burbujas">
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
     <form action="registrio.php" method="POST" class="FORMU">
       <div class="contenedor">
         <img src="assets/logo.jpg" class="posicion" alt="logo">
@@ -25,11 +35,11 @@
       <label for="cotejo">Verifica la Contraseña</label>
       <input type="password" id="password2" name="password2" required/>
 
-      <input type="checkbox" id="comparar_contras"/> Mostrar Contraseña
+      <button type="checkbox" id="checar"> Mostrar Contraseña
 
       <button type="submit">Entrar</button>
 
-      <p>¿ya tienes cuenta? <a href="login.html">Inicia Sesion</a></p>
+      <p>¿ya tienes cuenta?</p><a href="login.html" class="btn" style="margin-left: 50px">Inicia Sesion</a>
     </form>
     <script src="script.js"></script>
   </body>

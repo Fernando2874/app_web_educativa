@@ -26,20 +26,17 @@ togglebtn.addEventListener("click", ()=>{ /*cuando haga click en el boton se eje
 //   }
 // });
 
+var contraseña = document.getElementById("password");
+var verificar_contraseña = document.getElementById("password2");
+var checkbox = document.getElementById("checar");
 
-
-function sumar (){
-  const sumando1 = parseFloat(document.getElementById("sumando1").value) || 0;
-  const sumando2 = parseFloat(document.getElementById("sumando2").value) || 0;
-
-  const resultado = sumando1 + sumando2;
-  document.getElementById("resultado").value = resultado;
-}
-
-function restar (){
-  const minuendo = parseInt(document.getElementById("minuendo").value);
-  const sustraendo = parseInt(document.getElementById("sustraendo").value);
-
-  const diferencia = minuendo - sustraendo;
-  document.getElementById("diferencia").value = diferencia;
+function verificar (){
+  checkbox.addEventListener('click', () => {
+    if(contraseña.type !== null && verificar_contraseña !== null){
+      contraseña.type = "text";
+      verificar_contraseña.type = "text";
+    }else{
+      console.log("la contraseña no coincide")
+    }
+  });
 }

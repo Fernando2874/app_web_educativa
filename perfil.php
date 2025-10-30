@@ -23,6 +23,16 @@ $email_usuario = $_SESSION['usuario_email'] ?? '';
 </head>
 
 <body>
+    <ul class="burbujas">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
     <div class="layout">
         <div class="sidebar" id="sidebar">
             <button class="toggle-btn" id="toggle-btn">☰</button>
